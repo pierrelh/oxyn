@@ -1,1 +1,1 @@
-web: Oxyn
+web: oxyn

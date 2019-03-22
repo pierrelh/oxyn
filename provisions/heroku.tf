@@ -35,9 +35,9 @@ resource "heroku_app" "production" {
     FOOBAR = "baz"
   }
 
-  # buildpacks = [
-  #   "heroku/php",
-  # ]
+  buildpacks = [
+    "heroku/php",
+  ]
 }
 
 # Create a Heroku pipeline
