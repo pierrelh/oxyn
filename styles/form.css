@@ -1,0 +1,154 @@
+.formulaire{
+  padding: 5% 15% 5% 15%;
+  margin: 0 10% 10% 10%;
+  top: 480px;
+  position: absolute;
+  z-index: 100;
+  width: 80%;
+  height: auto;
+  opacity: 1;
+  background-color: white;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.hidden{
+  position: absolute;
+  z-index: 0 !important;
+  opacity: 0 !important;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.form-background{
+  content: "";
+  top: 0%;
+  position: fixed;
+  z-index: 99;
+  background-color: black;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+
+.cross{
+  cursor: pointer;
+  position: absolute;
+  width: 3%;
+  right: 2%;
+  top: 2%;
+}
+
+.form-list{
+  z-index: 2;
+  color: black;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.form-list > li > h1{
+  position: relative;
+  font-family: Roboto, sans-serif;
+  letter-spacing: .2em;
+  padding: 1.5% 1em 2% 1.3em;
+  font-size: 5em;
+  border: 4px solid black;
+  border-bottom: none;
+  text-align: center;
+  display: inline-block;
+  height: 15%;
+  min-width: 600px;
+}
+
+.form-list > li > h1::after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 4px;
+  width: 80px;
+  top: 100%;
+  right: -4px;
+}
+
+.form-list > li > h1::before{
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 4px;
+  width: 80px;
+  top: 100%;
+  left: -4px;
+}
+
+.form-list > li > h2{
+  letter-spacing: .2em;
+  font-size: 2.5em;
+  margin-top: -12px;
+  font-family: RobotoBold, sans-serif;
+}
+
+.formulaire form{
+  margin-top: 8%;
+}
+
+.formulaire > form > label{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.formulaire > form > input{
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+  height: 1.7em;
+  font-size: 2.5em;
+  margin: 1% auto 2% auto;
+}
+
+.formulaire > form > textarea{
+  margin: 1% auto auto auto;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px black;
+  height: 1.7em;
+  font-size: 2.5em;
+  height: 25%;
+  min-height: 25%;
+  max-height: 500px;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.formulaire > form > p{
+  margin-bottom: 5%;
+  font-family: "Roboto Light";
+  font-weight: 200;
+  font-size: 1.3em;
+}
+
+.send-button{
+  cursor: pointer;
+  margin: 15% auto auto auto;
+  display: block;
+  text-align: center;
+  left: 0;
+  right: 0;
+  width: 35% !important;
+  border: 3px solid black !important;
+  color: black;
+  font-family: "Roboto Bold", sans-serif;
+  font-weight: 700;
+  padding: 1em 3em 1em 3em;
+  background-color: white;
+  /* width: auto !important; */
+  font-size: 1.7em !important;
+  height: auto !important;
+  border-radius: 0 !important;
+}
