@@ -1,0 +1,98 @@
+main{
+  background: url('../img/presentation-background1.jpeg');
+  position: relative;
+  padding-top: 10%;
+  width: 100%;
+  min-height: 500px;
+  background-position: 0px -100px;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+
+main::after{
+  content: "";
+  top: 0%;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+}
+
+.main-list{
+  z-index: 2;
+  color: white;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.main-list > li > h1{
+  position: relative;
+  font-family: Roboto, sans-serif;
+  letter-spacing: .2em;
+  padding: 1.5% 1em 2% 1.3em;
+  font-size: 5em;
+  border: 4px solid white;
+  border-bottom: none;
+  text-align: center;
+  display: inline-block;
+  height: 15%;
+  min-width: 600px;
+}
+
+.main-list > li > h1::after{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 4px;
+  width: 90px;
+  top: 100%;
+  right: -4px;
+}
+
+.main-list > li > h1::before{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 4px;
+  width: 90px;
+  top: 100%;
+  left: -4px;
+}
+
+.main-list > li > h2{
+  letter-spacing: .2em;
+  font-size: 2em;
+  margin-top: -12px;
+  font-family: RobotoBold, sans-serif;
+}
+
+section{
+  background-color: white;
+  padding: 4% 10% 4% 10%;
+}
+
+.img-presentation{
+  width: 100%;
+  margin: 25px 0 25px 0;
+}
+
+h3{
+  font-family: RobotoBold, sans-serif;
+  letter-spacing: .1em;
+  font-size: 1.5em;
+}
+
+p{
+  margin-top: 25px;
+  font-family: RobotoBold, sans-serif;
+  letter-spacing: .1em;
+  line-height: 1.8em;
+  font-size: 1.2em;
+  text-align: left;
+}
