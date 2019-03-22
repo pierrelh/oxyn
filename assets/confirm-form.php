@@ -1,5 +1,5 @@
 <style>
-<?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/confirmFormStyle.css"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/confirmFormStyle.css"); ?>
 </style>
 <section id="confirm-form" class="confirm-form hidden">
   <ul class="confirm-form-list">

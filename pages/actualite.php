@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <style>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/master.css"); ?>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/actualiteStyle.css"); ?>
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/master.css"); ?>
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/actualiteStyle.css"); ?>
     </style>
     <title></title>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/header.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/header.php");
     ?>
   </head>
   <body>
@@ -43,7 +43,7 @@
 
     </section>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/footer.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/footer.php");
     ?>
   </body>
 </html>

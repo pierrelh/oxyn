@@ -1,5 +1,5 @@
 <style>
-<?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/footerStyle.css"); ?>
+<?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/footerStyle.css"); ?>
 </style>
 <footer>
   <img class="footer-logo" src="./img/simpleLogo.png" alt="">

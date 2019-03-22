@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <style>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/master.css"); ?>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/sponsorsStyle.css"); ?>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/pageStyle.css"); ?>
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/master.css"); ?>
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/sponsorsStyle.css"); ?>
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/pageStyle.css"); ?>
     </style>
     <title></title>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/header.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/header.php");
     ?>
   </head>
   <body>
@@ -20,8 +20,8 @@
       </ul>
     </main>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/sponsors-form.php");
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/confirm-form.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/sponsors-form.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/confirm-form.php");
     ?>
     <section class="description">
       <img class="cover-image" src="../img/cover.png" alt="">
@@ -32,7 +32,7 @@
       <a class="form-button" onclick="sponsorsFormAppear()">FORMULAIRE</a>
     </section>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/footer.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/footer.php");
     ?>
   </body>
 </html>

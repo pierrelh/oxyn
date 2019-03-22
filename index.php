@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./styles/indexStyle.css">
     <title>Oxyn</title>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/header.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/header.php");
     ?>
   </head>
   <body>
@@ -93,7 +93,7 @@
       </ul>
     </section>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/footer.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/assets/footer.php");
     ?>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
