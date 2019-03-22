@@ -3,7 +3,6 @@ provider "heroku" {
   api_key = "${var.heroku_api_key}"
 }
 
-# Déclaration des variables que nous utiliserons
 variable "heroku_api_key" {
   type = "string"
 }
@@ -12,7 +11,20 @@ variable "heroku_email" {
   type = "string"
 }
 
-# Create new app
+# Create apps
+resource "heroku_app" "testing" {
+  name   = "testingoxyn"
+  region = "eu"
+
+  config_vars {
+    FOOBAR = "baz"
+  }
+
+  buildpacks = [
+    "heroku/php",
+  ]
+}
+
 resource "heroku_app" "staging" {
   name   = "stagingoxyn"
   region = "eu"
@@ -26,7 +38,6 @@ resource "heroku_app" "staging" {
   ]
 }
 
-# Create new app
 resource "heroku_app" "production" {
   name   = "productionoxyn"
   region = "eu"
@@ -46,6 +57,12 @@ resource "heroku_pipeline" "oxynpipeline" {
 }
 
 # Couple apps to different pipeline stages
+resource "heroku_pipeline_coupling" "testing" {
+  app      = "${heroku_app.testing.name}"
+  pipeline = "${heroku_pipeline.oxynpipeline.id}"
+  stage    = "testing"
+}
+
 resource "heroku_pipeline_coupling" "staging" {
   app      = "${heroku_app.staging.name}"
   pipeline = "${heroku_pipeline.oxynpipeline.id}"
