@@ -2,11 +2,13 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://localhost/Oxyn/styles/master.css">
-    <link rel="stylesheet" href="http://localhost/Oxyn/styles/actualiteStyle.css">
+    <style>
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/master.css"); ?>
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/actualiteStyle.css"); ?>
+    </style>
     <title></title>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/Oxyn/assets/header.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/header.php");
     ?>
   </head>
   <body>
@@ -41,7 +43,7 @@
 
     </section>
     <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/Oxyn/assets/footer.php");
+      include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/assets/footer.php");
     ?>
   </body>
 </html>

@@ -1,17 +1,21 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://localhost/Oxyn/js/header.js"></script>
-<link rel="stylesheet" href="http://localhost/Oxyn/styles/headerStyle.css">
-<link rel="shortcut icon" href="http://localhost/Oxyn/img/simpleLogo.png">
+<style>
+<?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/styles/headerStyle.css"); ?>
+</style>
+<script>
+<?php include_once($_SERVER['DOCUMENT_ROOT']."/oxyn/js/header.js"); ?>
+</script>
+<link rel="shortcut icon" href="http://localhost/oxyn/img/simpleLogo.png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <header class="day "id="header">
-  <img class="oxyn-logo-header" src="http://localhost/Oxyn/img/simpleLogo.png" alt="">
-  <img class="oxyn-logo-header-black" src="http://localhost/Oxyn/img/simpleLogoBlack.png" alt="">
+  <img class="oxyn-logo-header" src="http://localhost/oxyn/img/simpleLogo.png" alt="">
+  <img class="oxyn-logo-header-black" src="http://localhost/oxyn/img/simpleLogoBlack.png" alt="">
   <ul class="header-list">
-    <li><a href="http://localhost/Oxyn/">ACCUEIL</a></li>
-    <li><a href="http://localhost/Oxyn/pages/artistes.php">ARTISTES</a></li>
-    <li><a href="http://localhost/Oxyn/pages/bars.php">BARS</a></li>
-    <li><a href="http://localhost/Oxyn/pages/sponsors.php">SPONSORS</a></li>
-    <li><a href="http://localhost/Oxyn/pages/actualite.php">AGENDA</a></li>
+    <li><a href="http://localhost/oxyn/">ACCUEIL</a></li>
+    <li><a href="http://localhost/oxyn/pages/artistes.php">ARTISTES</a></li>
+    <li><a href="http://localhost/oxyn/pages/bars.php">BARS</a></li>
+    <li><a href="http://localhost/oxyn/pages/sponsors.php">SPONSORS</a></li>
+    <li><a href="http://localhost/oxyn/pages/actualite.php">AGENDA</a></li>
   </ul>
   <ul id="header" class="header-logo-list">
     <li class="item-media">
