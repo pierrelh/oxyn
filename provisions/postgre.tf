@@ -1,6 +1,6 @@
 # Create a database, and configure the app to use it
-resource "heroku_addon" "database_testing" {
-  app  = "${heroku_app.testing.name}"
+resource "heroku_addon" "database_review" {
+  app  = "${heroku_app.review.name}"
   plan = "heroku-postgresql:hobby-dev"
 }
 

@@ -12,8 +12,8 @@ variable "heroku_email" {
 }
 
 # Create apps
-resource "heroku_app" "testing" {
-  name   = "testingoxyn"
+resource "heroku_app" "review" {
+  name   = "review Oxyn"
   region = "eu"
 
   config_vars {
@@ -26,7 +26,7 @@ resource "heroku_app" "testing" {
 }
 
 resource "heroku_app" "staging" {
-  name   = "stagingoxyn"
+  name   = "staging Oxyn"
   region = "eu"
 
   config_vars {
@@ -39,7 +39,7 @@ resource "heroku_app" "staging" {
 }
 
 resource "heroku_app" "production" {
-  name   = "productionoxyn"
+  name   = "production Oxyn"
   region = "eu"
 
   config_vars {
@@ -57,10 +57,10 @@ resource "heroku_pipeline" "oxynpipeline" {
 }
 
 # Couple apps to different pipeline stages
-resource "heroku_pipeline_coupling" "testing" {
-  app      = "${heroku_app.testing.name}"
+resource "heroku_pipeline_coupling" "review" {
+  app      = "${heroku_app.review.name}"
   pipeline = "${heroku_pipeline.oxynpipeline.id}"
-  stage    = "testing"
+  stage    = "review"
 }
 
 resource "heroku_pipeline_coupling" "staging" {
