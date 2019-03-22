@@ -14,7 +14,7 @@ variable "heroku_email" {
 
 # Create new app
 resource "heroku_app" "staging" {
-  name   = "stagingchat"
+  name   = "stagingoxyn"
   region = "eu"
 
   config_vars {
@@ -28,7 +28,7 @@ resource "heroku_app" "staging" {
 
 # Create new app
 resource "heroku_app" "production" {
-  name   = "productionchat"
+  name   = "productionoxyn"
   region = "eu"
 
   config_vars {
@@ -41,8 +41,8 @@ resource "heroku_app" "production" {
 }
 
 # Create a Heroku pipeline
-resource "heroku_pipeline" "chatpipeline" {
-  name = "chatpipeline"
+resource "heroku_pipeline" "oxynpipeline" {
+  name = "oxynpipeline"
 }
 
 # Couple apps to different pipeline stages
