@@ -2,27 +2,27 @@
 <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/footerStyle.css"); ?>
 </style>
 <footer>
-  <img class="footer-logo" src="./img/simpleLogo.png" alt="">
+  <img class="footer-logo" src="<?php echo Home ?>img/simpleLogo.png" alt="">
   <ul class="div-list-footer">
     <li>
       <div class="footer-div">
         <ul class="logo-list-footer">
           <li class="item-media">
-            <a target="_blank" href="https://www.facebook.com/Le-Fleuron-des-Entreprises-Responsables-221592781934088/" class="item-link" rel="nofollow">
+            <a target="_blank" href="#" class="item-link" rel="nofollow">
               <span>
                 <i class="fab fa-facebook"></i>
               </span>
             </a>
           </li>
           <li class="item-media">
-            <a target="_blank" href="https://www.youtube.com/channel/UCP6IfYaY9CSiUMsOjjAE9tQ" class="item-link" rel="nofollow">
+            <a target="_blank" href="#" class="item-link" rel="nofollow">
               <span>
                 <i class="fab fa-youtube"></i>
               </span>
             </a>
           </li>
           <li class="item-media">
-            <a target="_blank" href="https://www.youtube.com/channel/UCP6IfYaY9CSiUMsOjjAE9tQ" class="item-link" rel="nofollow">
+            <a target="_blank" href="#" class="item-link" rel="nofollow">
               <span>
                 <i class="fab fa-twitter"></i>
               </span>

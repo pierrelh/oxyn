@@ -7,7 +7,7 @@
     <li><h1>FORMULAIRE</h1></li>
     <li><h2>BARS</h2></li>
   </ul>
-  <img onclick="sponsorsFormDisappear()" class="cross" src="http://localhost/img/cross.png" alt="">
+  <img onclick="sponsorsFormDisappear()" class="cross" src="../img/cross.png" alt="">
 
   <form class="" method="post">
     <label for="gerantName">Nom du gérant :</label>
@@ -41,7 +41,6 @@
     <input id="materiel" type="radio" name="materiel" value="NON">
     <br>
     <a onclick="confirmFormAppear()" class="send-button">ENVOYER</a>
-    <!-- <input onclick="confirmFormAppear()" class="send-button" type="submit" name="" value="ENVOYER"> -->
   </form>
 
 
@@ -49,4 +48,4 @@
 <section id="sponsors-form-background" class="form-background hidden">
 </section>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://localhost/js/page.js"></script>
+<script type="text/javascript" src="<?php echo Home ?>js/page.js"></script>
