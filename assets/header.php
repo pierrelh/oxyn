@@ -1,5 +1,5 @@
 <?php
-  define('Home', 'https://stagingoxyn.herokuapp.com/');
+  define('Home', 'http://localhost/');
 ?>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <style>
@@ -18,7 +18,6 @@
     <li><a href="<?php echo Home ?>pages/artistes.php">ARTISTES</a></li>
     <li><a href="<?php echo Home ?>pages/bars.php">BARS</a></li>
     <li><a href="<?php echo Home ?>pages/sponsors.php">SPONSORS</a></li>
-    <li><a href="<?php echo Home ?>pages/actualite.php">AGENDA</a></li>
   </ul>
   <ul id="header" class="header-logo-list">
     <li class="item-media">

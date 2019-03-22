@@ -35,7 +35,7 @@
 }
 
 .night > .oxyn-logo-header{
-  top: 20%;
+  top: 10%;
   left: 2%;
   width: 3%;
   position: absolute;
@@ -45,7 +45,7 @@
 }
 
 .day > .oxyn-logo-header-black{
-  top: 10%;
+  top: 20%;
   left: 2%;
   width: 5%;
   position: absolute;
