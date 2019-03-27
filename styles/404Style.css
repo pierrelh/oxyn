@@ -1,0 +1,114 @@
+main{
+  background-image: url("../img/presentation-background1.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 10%;
+  background-color: black;
+  height: 80%;
+  width: 100%;
+  min-height: 450px;
+  max-height: 550px;
+}
+
+
+.main-list{
+  z-index: 2;
+  font-family: Roboto, sans-serif;
+  color: white;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+li > h1{
+  position: relative;
+  font-family: RobotoBlack, sans-serif;
+  letter-spacing: .3em;
+  padding: 1.5% 1.7em 2% 2em;
+  font-size: 7em;
+  border: 4px solid white;
+  border-bottom: none;
+  text-align: center;
+  display: inline-block;
+  height: 15%;
+}
+
+li > h1::after{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 4px;
+  width: 100px;
+  top: 100%;
+  right: -4px;
+}
+
+li > h1::before{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 4px;
+  width: 100px;
+  top: 100%;
+  left: -4px;
+}
+
+h2{
+  letter-spacing: .2em;
+  font-size: 2.5em;
+  margin-top: -12px;
+  font-family: RobotoThin, sans-serif;
+}
+
+h2 strong{
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+section{
+  background-color: white;
+  height: 80%;
+  width: 100%;
+  min-height: 450px;
+  max-height: 550px;
+  padding: 5% 5% 5% 5%;
+}
+
+section > h1{
+  text-align: center;
+  font-family: RobotoBlack, sans-serif;
+  letter-spacing: .3em;
+  font-size: 7em;
+}
+
+section > p{
+  margin-top: 25px;
+  text-align: center;
+  font-family: RobotoThin, sans-serif;
+  letter-spacing: .2em;
+  font-size: 3em;
+}
+
+.button-list{
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 50px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-list li a{
+  padding: 10px 20px;
+  color: black;
+  border: 3px solid black;
+  font-family: RobotoBlack, sans-serif;
+  font-size: 2em;
+}

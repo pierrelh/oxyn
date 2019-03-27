@@ -1,5 +1,5 @@
 <?php
-  define('Home', 'https://stagingoxyn.herokuapp.com/');
+  define('Home', 'http://localhost/');
 ?>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <style>
