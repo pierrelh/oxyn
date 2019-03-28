@@ -20,7 +20,7 @@
       <h1>PAGE 404</h1>
       <p>Désolé, impossible de trouver la page demandée. Effectuez une nouvelle recherche ou découvrez de nouveaux artistes !</p>
       <ul class="button-list">
-        <li><a href="./index.php">ACCUEIL</a></li>
+        <li><a href="./">ACCUEIL</a></li>
         <li><a href="./pages/artistes.php">ARTISTES</a></li>
       </ul>
     </section>
