@@ -1,10 +1,10 @@
 .day{
   z-index: 999;
   width: 100%;
-  padding: 2% 5% 5% 3%;
+  padding-top: 2%;
   position: fixed;
   font-family: "Roboto";
-  height: 10%;
+  height: 100px;
   background-color: rgb(255, 255, 255, 0);
   -webkit-transition-duration: 0.8s;
   transition-duration: 0.4s;
@@ -13,13 +13,11 @@
 .night{
   z-index: 999;
   width: 100%;
-  padding: 1% 5% 0% 0%;
+  padding-top: 20px;
   position: fixed;
   font-family: "Roboto";
-  height: 9%;
-  max-height: 70px;
-  /* background: linear-gradient(#CCC 15%, #FFFFFF 50%, #000000); */
-  background-color: rgb(255, 255, 255, .9);
+  height: 70px;
+  background-color: rgb(255, 255, 255, 1);
   -webkit-transition-duration: 0.8s;
   transition-duration: 0.8s;
 }
@@ -52,6 +50,11 @@
   -webkit-transition-duration: 0.8s;
   transition-duration: 0.8s;
   opacity: 0;
+}
+
+.oxyn-logo-header > img, .oxyn-logo-header-black > img{
+  box-sizing: content-box;
+  width: 100%;
 }
 
 .night > .oxyn-logo-header-black{
@@ -111,6 +114,7 @@
   position: absolute;
   margin-top: 1.5%;
   width: 10%;
+  min-width: 120px;
   right: 3%;
   left: auto;
   display: flex;
@@ -122,6 +126,7 @@
 .night > .header-logo-list{
   position: absolute;
   margin-top: .5%;
+  min-width: 120px;
   width: 10%;
   right: 3%;
   left: auto;

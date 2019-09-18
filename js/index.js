@@ -6,16 +6,16 @@ $(document).ready(function () {
       var sectionBars = document.getElementById('bars');
       var sectionSponsors = document.getElementById('sponsors');
 
-      if (ScrollTop > 50) {
+      if (ScrollTop > 80) {
           sectionPresentation.classList = 'appear';
       }
-      if (ScrollTop > 350) {
+      if (ScrollTop > 420) {
           sectionArtistes.classList = 'appear';
       }
-      if (ScrollTop > 630) {
+      if (ScrollTop > 760) {
           sectionBars.classList = 'appear';
       }
-      if (ScrollTop > 1000) {
+      if (ScrollTop > 1100) {
           sectionSponsors.classList = 'appear';
       }
   });

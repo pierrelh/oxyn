@@ -24,16 +24,9 @@
 **/*.tfvars
 **/*.tfstate
 **/*.tfstate.*
-*.mp4
-0000/
-all/
+vendor/
+./settings.php
 
-
-<<<<<<< HEAD
-./functions/getDB.php
-
-=======
->>>>>>> dev
 # Crash log files
 crash.log
 

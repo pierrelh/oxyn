@@ -1,13 +1,13 @@
+<?php
+  $link = 'https://' . $_SERVER['HTTP_HOST'];
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <style>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/master.css"); ?>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/sponsorsStyle.css"); ?>
-    <?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/pageStyle.css"); ?>
-    </style>
-    <title></title>
+    <link rel="stylesheet" href="<?php echo $link ?>/styles/sponsorsStyle.css">
+    <link rel="stylesheet" href="<?php echo $link ?>/styles/pageStyle.css">
+    <title>OXYN - Sponsors</title>
     <?php
       include_once($_SERVER['DOCUMENT_ROOT']."/assets/header.php");
     ?>

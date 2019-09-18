@@ -90,7 +90,7 @@ section > p{
   margin-top: 25px;
   text-align: center;
   font-family: RobotoThin, sans-serif;
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   font-size: 3em;
 }
 
@@ -106,7 +106,7 @@ section > p{
 }
 
 .button-list li a{
-  padding: 10px 20px;
+  padding: 10px 35px;
   color: black;
   border: 3px solid black;
   font-family: RobotoBlack, sans-serif;

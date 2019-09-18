@@ -1,21 +1,26 @@
+/* @media screen and (min-device-width: 641px) { */
+
 /*main style*/
 main{
   position: relative;
-  padding-top: 10%;
+  padding: 10% 0 3% 0;
   background-color: black;
-  height: 80%;
   width: 100%;
-  min-height: 550px;
-  max-height: 650px;
 }
 
 .video-background{
-  left: 0;
-  top: 0%;
+  box-sizing: content-box;
   position: absolute;
-  z-index: 0;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
-  height: 100%;
+  min-height: auto;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  transform: translateX(-50%) translateY(-45%);
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 main::after{
@@ -153,14 +158,19 @@ h3 strong{
 }
 
 /*presentation style*/
+.section-index{
+  background-color: black;
+  position: relative;
+  padding-top: 1px;
+}
+
 section{
   z-index: 100;
-  opacity: 0;
+  opacity: 0.15;
+  height: 40rem;
   position: relative;
-  margin-top: 5%;
   -webkit-transition-duration: 0.8s;
   transition-duration: 0.8s;
-  /* min-height: 400px; */
 }
 
 section:hover{
@@ -172,7 +182,6 @@ section:hover{
 .appear{
   opacity: 1 !important;
   display: block !important;
-  margin-top: 0%!important;
   position: relative;
   left: 0;
   height: 40rem;
@@ -226,7 +235,7 @@ section:hover{
 }
 
 .div-one-presentation{
-  background-image: url("../img/presentation-background1.jpeg");
+  background-image: url("../../img/presentation-background1.jpeg");
 }
 
 .div-one-presentation::after, .div-one-bars::after{
@@ -297,7 +306,7 @@ h4{
 }
 
 .div-two-presentation{
-  background-image: url("../img/presentation-background2.png");
+  background-image: url("../../img/presentation-background2.png");
 }
 
 .presentation-img{
@@ -318,12 +327,12 @@ h4{
 }
 
 .div-one-artiste{
-  background-image: url("../img/background-artiste.png");
+  background-image: url("../../img/background-artiste.png");
   left: 0 !important;
 }
 
 .div-two-artiste{
-  background-image: url("../img/background-artiste2.png");
+  background-image: url("../../img/background-artiste2.png");
   right: 0 !important;
   left: auto !important;
 }
@@ -347,21 +356,24 @@ h4{
 
 /* bars style*/
 .div-one-bars{
-  background-image: url("../img/background-bars1.png");
+  background-image: url("../../img/background-bars1.png");
+  background-size: 150%!important;
 }
 
 .div-two-bars{
-  background-image: url("../img/background-bars2.png");
+  background-image: url("../../img/background-bars2.png");
 }
 
 /* sponsors style*/
 .div-one-sponsors{
-  background-image: url("../img/background-sponsors1.jpeg");
+  background-image: url("../../img/background-sponsors1.jpeg");
   left: 0 !important;
 }
 
 .div-two-sponsors{
-  background-image: url("../img/background-sponsors2.jpeg");
+  background-image: url("../../img/background-sponsors2.jpeg");
   right: 0 !important;
   left: auto !important;
 }
+
+/* } */
