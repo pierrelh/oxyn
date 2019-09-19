@@ -18,7 +18,7 @@
     //             array("resource_type" => "video"));
 \Cloudinary\Uploader::upload($_FILES['file']['tmp_name'],
                       array("folder" => "oxyn-folder/user-demo/", "public_id" => "my_dog", "overwrite" => TRUE,
-                      "notification_url" => "https://stagingoxyn.herokuapp.com", "resource_type" => "video"))
+                      "notification_url" => "https://stagingoxyn.herokuapp.com", "resource_type" => "auto"))
 
   // }
 
