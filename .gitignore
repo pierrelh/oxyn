@@ -24,8 +24,6 @@
 **/*.tfvars
 **/*.tfstate
 **/*.tfstate.*
-vendor/
-./settings.php
 
 # Crash log files
 crash.log

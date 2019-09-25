@@ -1,0 +1,32 @@
+{
+  "addons": [
+    "cloudinary",
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ],
+  "env": {
+    "CLOUDINARY_URL": {
+      "required": true
+    },
+    "FOOBAR": {
+      "required": true
+    },
+    "REDIS_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "oxyn",
+  "scripts": {
+  },
+  "stack": "heroku-16"
+}

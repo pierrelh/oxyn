@@ -1,4 +1,5 @@
 <?php
+  include_once($_SERVER['DOCUMENT_ROOT']."/back/assets/header.php");
   $link = 'https://' . $_SERVER['HTTP_HOST'];
 ?>
 <!DOCTYPE html>
@@ -10,9 +11,6 @@
     <link rel="stylesheet" href="<?php echo $link ?>/styles/pageStyle.css">
     <link rel="stylesheet" href="<?php echo $link ?>/styles/actualiteBack.css">
     <title>OXYN - Actualités</title>
-    <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/back/assets/header.php");
-    ?>
 </head>
 <body>
     <main>

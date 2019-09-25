@@ -14,60 +14,80 @@ function sponsorsFormDisappear(){
   background.className = 'form-background hidden';
 }
 
-$("#form-artist").on('submit',(function(e) {
-  e.preventDefault();
-  $.ajax({
-    url: "../functions/sendArtistData.php",
-    type: "POST",
-    data: new FormData(this),
-    contentType: false,
-    cache: false,
-    processData: false,
-  });
-}));
-//
-// var sendArtistInfos = function(){
-//   var artist_name = document.getElementById('artistName').value;
-//   // var member_number = parseInt(document.getElementById('memberNumber').value);
-//   // var artist_phone = document.getElementById('phone').value;
-//   var artist_mail = document.getElementById('mail').value;
-//   // var artist_youtube = document.getElementById('youtube').value;
-//   // var artist_soundcloud = document.getElementById('soundcloud').value;
-//   var artist_musictype = document.getElementById('musicType').value;
-//   // var artist_adress = document.getElementById('adress').value;
-//   // var artist_demo = $("#demo").prop("files")[0];
-//   var form_data = new FormData($('form-artist')[0]);
-//   // form_data.append('file', artist_demo);
-//   // form_data.append('artistName', artist_name);
-//   // form_data.append('memberNumber', member_number);
-//   // form_data.append('phone', artist_phone);
-//   // form_data.append('mail', artist_mail);
-//   // form_data.append('youtube', artist_youtube);
-//   // form_data.append('soundcloud', artist_soundcloud);
-//   // form_data.append('musicType', artist_musictype);
-//   // form_data.append('adress', artist_adress);
-//
-//   if (artist_name == "" || artist_mail == "" || artist_musictype == "") {
-//     if (document.getElementById('titre-form').innerHTML == "") {
-//       var errormsg = document.createTextNode("Merci de bien vouloir remplir tous les champs.");
-//       document.getElementById("titre-form").appendChild(errormsg);
-//     }
-//     window.scrollTo(0,430);
-//   }else{
-//     $.ajax({
-//       url: "../functions/sendArtistData.php",
-//       type: "POST",
-//       dataType: 'script',
-//       cache: false,
-//       contentType: false,
-//       processData: false,
-//       data: form_data,
-//       success: function(data, test){
-//         confirmFormAppear();
-//       }
-//     });
-//   }
-// }
+var sendArtistInfos = function(){
+  var artist_name = document.getElementById('artistName').value;
+  var member_number = parseInt(document.getElementById('memberNumber').value);
+  var artist_phone = document.getElementById('phone').value;
+  var artist_mail = document.getElementById('mail').value;
+  var artist_youtube = document.getElementById('youtube').value;
+  var artist_soundcloud = document.getElementById('soundcloud').value;
+  var artist_musictype = document.getElementById('musicType').value;
+  var artist_adress = document.getElementById('adress').value;
+  var artist_demo = $("#file").prop("files")[0];
+  var checkExtension = true;
+  if (document.getElementById("file").files.length != 0) {
+    var extension = artist_demo.name.split('.').pop().toLowerCase();
+    if (extension != "flac" && extension != "ape" && extension != "alac" && extension != "mp3" && extension != "wma" && extension != "ogg" && extension != "aac" && extension != "wav") {
+      var checkExtension = false;
+    }
+  }
+
+  if (artist_name == "" || artist_mail == "" || artist_musictype == "") {
+    if (document.getElementById('titre-form').innerHTML == "") {
+      var errormsg = document.createTextNode("Merci de bien vouloir remplir tous les champs.");
+      document.getElementById("titre-form").appendChild(errormsg);
+    }
+    window.scrollTo(0,430);
+  }else if (checkExtension == false) {
+    if (document.getElementById('titre-form').innerHTML != "") {
+      var txt = document.getElementById('titre-form');
+      txt.removeChild(txt.childNodes[0]);
+    }
+    var errormsg = document.createTextNode("Le format du fichier n'est pas accepté, merci de réessayer avec un format compatible. (mp3, flac, wav, etc.)");
+    document.getElementById("titre-form").appendChild(errormsg);
+    window.scrollTo(0,430);
+  }else{
+    var form_data = new FormData($('form-artist')[0]);
+    form_data.append('file', artist_demo);
+    form_data.append('artistName', artist_name);
+    form_data.append('memberNumber', member_number);
+    form_data.append('phone', artist_phone);
+    form_data.append('mail', artist_mail);
+    form_data.append('youtube', artist_youtube);
+    form_data.append('soundcloud', artist_soundcloud);
+    form_data.append('musicType', artist_musictype);
+    form_data.append('adress', artist_adress);
+    $.ajax({
+      url: "../functions/sendArtistData.php",
+      type: "POST",
+      dataType: 'script',
+      cache: false,
+      contentType: false,
+      processData: false,
+      data: form_data,
+      xhr: function () {
+        var xhr = $.ajaxSettings.xhr();
+        xhr.upload.onprogress = function (e) {
+          if (e.lengthComputable) {
+            var elem = document.getElementById("myBarPlus");
+            var elem1 = document.getElementById("myBarMoins");
+            var span = document.getElementById("sendButton");
+            var span1 = document.getElementById("barSpan2");
+            elem.style.width = Math.round((e.loaded / e.total)*100) + "%";
+            span.innerHTML = Math.round((e.loaded / e.total)*100) + " %";
+            elem1.style.width = Math.round(100-(e.loaded / e.total)*100) + "%";
+            span1.innerHTML = Math.round((e.loaded / e.total)*100) + " %";
+          }
+        };
+        return xhr;
+      }
+    }).done(function (e) {
+        confirmFormAppear();
+    }).fail(function (e) {
+        console.log("upload failed");
+    });
+  }
+}
 
 var sendBarInfos = function(){
   salle_gerant = document.getElementById('gerantName').value;

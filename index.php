@@ -15,7 +15,7 @@
   <body>
     <main>
       <video class="video-background" loop muted autoplay>
-        <source src="<?php echo $link ?>/video/sample<?php echo rand(1, 4) ?>.mp4" type="video/mp4" />
+        <source src="<?php echo $link ?>/videos/sample<?php echo rand(1, 4) ?>.mp4" type="video/mp4" />
       </video>
       <ul class="main-list">
         <li><h1>OXYN</h1></li>

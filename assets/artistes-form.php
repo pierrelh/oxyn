@@ -48,8 +48,15 @@
     <br>
     <input id="adress" type="text" name="artist-adress" value="">
     <br>
-    <input id="sub" type="submit" value="Upload" class="submit" />
-    <!-- <a onclick="sendArtistInfos()" class="send-button">ENVOYER</a> -->
+    <div class="progress-bar">
+      <div id="myBarPlus" class="bar positive">
+        <span id="sendButton">ENVOYER</span>
+      </div>
+      <div id="myBarMoins" class="bar negative">
+        <span onclick="sendArtistInfos()" id="barSpan2">ENVOYER</span>
+      </div>
+    </div>
+    <!-- <a onclick="sendArtistInfos()" id="sendButton" class="send-button">ENVOYER</a> -->
   </form>
 
 

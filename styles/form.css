@@ -182,3 +182,48 @@
   font-weight: 400;
   font-size: 1.5em;
 }
+
+.progress-bar {
+  position: relative;
+  border: black solid 2px;
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  margin: 8% auto auto auto;
+}
+.progress-bar .bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.progress-bar .bar span {
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 100%;
+  text-align: center;
+  font-family: "Roboto Bold", sans-serif;
+  font-weight: 700;
+  font-size: 1.7em;
+}
+.progress-bar .bar.positive {
+  background: black;
+  left: 0;
+  width: 0%;
+}
+.progress-bar .bar.positive span {
+  left: 0;
+  color: white;
+}
+.progress-bar .bar.negative {
+  background: white;
+  right: 0;
+  width: 100%;
+}
+.progress-bar .bar.negative span {
+  right: 0;
+  color: black;
+  cursor: pointer;
+}

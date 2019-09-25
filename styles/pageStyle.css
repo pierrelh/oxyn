@@ -40,7 +40,6 @@ main::after{
   border-bottom: none;
   text-align: center;
   display: inline-block;
-  height: 15%;
   min-width: 600px;
 }
 

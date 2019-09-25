@@ -1,4 +1,5 @@
 <?php
+  include_once($_SERVER['DOCUMENT_ROOT']."/back/assets/header.php");
   $link = 'https://' . $_SERVER['HTTP_HOST'];
 ?>
 <!DOCTYPE html>
@@ -9,9 +10,6 @@
     <link rel="stylesheet" href="<?php echo $link ?>/styles/artistesStyle.css">
     <link rel="stylesheet" href="<?php echo $link ?>/styles/pageStyle.css">
     <title>OXYN - Artistes</title>
-    <?php
-      include_once($_SERVER['DOCUMENT_ROOT']."/back/assets/header.php");
-    ?>
 </head>
 <body>
     <main>
@@ -21,29 +19,51 @@
       </ul>
     </main>
     <section class="print-result">
+      <div id="backgroundSuppress" class="background-suppress"></div>
+      <div class="suppress-confirm" id="supressConfirm">
+        <p id="groupeName"></p>
+        <ul>
+          <li><a id="suppressYes">OUI</a></li>
+          <li><a onclick="suppressDisappear()" id="suppressNo">NON</a></li>
+        </ul>
+      </div>
         <?php
             include_once($_SERVER['DOCUMENT_ROOT']."/functions/getArtists.php");
             $data = getArtist();
-            $x = 0;
-            foreach ($data as $key => $value) {
-                echo "<div id='results".$x."' class='result'>
-                        <p onclick='detailAppear(".$x.")'>".$value['artist_name']."</p>
-                        <img onclick='detailDisappear(".$x.")' id='cross".$x."' class='cross-detail' src='../../img/white-cross.png' alt=''>
-                    </div>
-                    <div id='details".$x."' class='detail-hidden'>
-                    <ul>
-                        <li>Style de musique: ".$value["artist_type"]."</li>
-                        <li>Nombre de membre(s): ".$value["artist_number"]."</li>
-                        <li>Téléphone: ".$value["artist_phone"]."</li>
-                        <li>Email: ".$value["artist_email"]."</li>
-                        <li>YouTube: ".$value["artist_youtube"]."</li>
-                        <li>SoundCloud: ".$value["artist_soundcloud"]."</li>
-                        <li>Adresse: ".$value["artist_adress"]."</li>
-                        <li>Démo: ".$value["artist_demo"]."</li>
-                    </ul>
-                </div>";
-                $x++;
+            if (!empty($data)) {
+              $x = 0;
+              foreach ($data as $key => $value) {
+                  echo "<div id='results".$x."' class='result'>
+                          <p onclick='detailAppear(".$x.")'>".$value['artist_name']."</p>
+                          <ul>
+                            <li><img onclick='suppressAppear(".$value["artist_id"].", \"".$value['artist_name']."\", ".$x.", \"Artist\")' id='trash".$x."' class='cross-detail' src='../../img/delete.png' alt=''></li>
+                            <li><img onclick='detailDisappear(".$x.")' id='cross".$x."' class='cross-detail' src='../../img/white-cross.png' alt=''></li>
+                          </ul>
+                      </div>
+                      <div id='details".$x."' class='detail-hidden'>
+                      <ul>
+                          <li>Style de musique: ".$value["artist_type"]."</li>
+                          <li>Nombre de membre(s): ".$value["artist_number"]."</li>
+                          <li>Téléphone: ".$value["artist_phone"]."</li>
+                          <li>Email: ".$value["artist_email"]."</li>
+                          <li>YouTube: ".$value["artist_youtube"]."</li>
+                          <li>SoundCloud: ".$value["artist_soundcloud"]."</li>
+                          <li>Adresse: ".$value["artist_adress"]."</li>
+                          <li>Démo:";
+                          if ($value["artist_demo"] != "false") {
+                            echo "<audio controls src=".$value["artist_demo"]."></audio></li>";
+                          }else {
+                            echo " Non renseigné</li>";
+                          }
+                          echo"
+                      </ul>
+                  </div>";
+                  $x++;
+              }
+            }else {
+              echo "<p class='txt-no-content'>Il n'y a aucun sponsor à afficher pour l'instant.</p>";
             }
+
         ?>
     </section>
     <?php
