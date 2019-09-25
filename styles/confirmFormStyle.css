@@ -3,7 +3,7 @@
   margin: 0 30% 10% 30%;
   top: 800px;
   position: absolute;
-  z-index: 903 !important;
+  z-index: 903;
   width: 40%;
   height: auto;
   opacity: 1;

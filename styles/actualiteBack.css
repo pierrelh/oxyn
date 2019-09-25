@@ -1,0 +1,40 @@
+label{
+  color: #FFF;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+#detailsx{
+  padding: 0 25px 15px 25px !important;
+}
+
+textarea{
+  max-width: 100%;
+}
+
+input, select {
+    margin: 0 0 5px 15px;
+    width: 75%;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+}
+
+.form-add-article{
+  text-align: right;
+}
+
+#send-button{
+  width: 37%;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+  background-color: #fff;
+  border: none;
+  color: #000;
+  margin-top: 15px;
+  font-size: 1.5em;
+  padding: .5em;
+  cursor: pointer;
+}

@@ -1,0 +1,180 @@
+.print-result{
+    background-color: white;
+    padding: 2em 0 2em 0;
+}
+
+.result{
+    position: relative;
+    background-color: black;
+    margin: 0px 25% 0 25%;
+    word-wrap: break-word;
+    cursor: pointer;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.result-left{
+    position: relative;
+    margin: 0 25% 0 25%;
+    padding-left: 15em;
+    word-wrap: break-word;
+    background-color: black;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.detail-hidden{
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    text-align: left !important;
+    max-height: 0;
+    transition: max-height 0.8s ease-out;
+    margin: 0 25% 15px 25%;
+    padding: 0 2em 0 15em;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.detail-visible{
+    position: relative;
+    text-align: left !important;
+    background-color: black;
+    padding: 0 2em 0 15em;
+    margin: 0 25% 15px 25% !important;
+    max-height: 800px;
+    transition: max-height 0.8s ease-in 0.4s;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.result > p, .result-left > p{
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.result > p{
+    height: 4em;
+    line-height: 3.7em;
+    text-align: center;
+    transform: translateX(0%);
+    transition: 0.8s;
+}
+
+.result-left > p{
+    height: 4em;
+    line-height: 3.7em;
+    text-align: center;
+    transform: translateX(-50%);
+    transition: 0.8s;
+}
+
+.result > p, .result-left > p, .detail-hidden > ul > li, .detail-visible > ul > li{
+    font-family: "Roboto";
+    font-size: 2em;
+    box-sizing: content-box;
+    color: white;
+}
+
+.cross-detail{
+    visibility: hidden;
+    width: 25px;
+    position: absolute;
+    margin-top: -55px;
+    left: 100%;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.cross-detail-visible, .trash-detail-visible{
+    display: block;
+    width: 25px;
+    position: absolute;
+    margin-top: -55px;
+    left: 92%;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.trash-detail-visible{
+  left: 85% !important;
+}
+
+.detail-hidden > ul, .detail-visible > ul{
+    padding-bottom: 2em;
+}
+
+.suppress-confirm{
+  overflow: hidden;
+  top: 25%;
+  background-color: #fff;
+  position: fixed;
+  width: 40%;
+  left: 30%;
+  z-index: 9;
+  height: 0px;
+  transition-duration: 0.8s;
+}
+
+.suppress-confirm-appear{
+  overflow: inherit;
+  top: 25%;
+  background-color: #fff;
+  position: fixed;
+  width: 40%;
+  left: 30%;
+  z-index: 9;
+  padding: 10em 2em 0em 2em;
+  height: 400px;
+  transition-duration: 0.8s;
+}
+
+#supressConfirm p{
+  text-align: center;
+  font-family: RobotoBold, sans-serif;
+  font-size: 2.2em;
+}
+
+#supressConfirm ul{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20%;
+}
+
+#supressConfirm ul li a{
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 2em;
+  border: 2px solid black;
+  padding: 1em 3em;
+}
+
+.background-suppress{
+  position: fixed;
+  width: 100%;
+  height: 0;
+  background-color: black;
+  z-index: 8;
+  top: 0;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+
+.background-suppress-appear{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 8;
+  top: 0;
+  opacity: 0.5;
+  transition-duration: 0.4s;
+}
+
+.txt-no-content{
+  padding: 1.5em 0;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 2em;  
+}

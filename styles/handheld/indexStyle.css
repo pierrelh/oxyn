@@ -1,0 +1,11 @@
+@media screen and (max-device-width: 640px) {
+  main{
+    position: relative;
+    padding-top: 10%;
+    background-color: white;
+    height: 80%;
+    width: 100%;
+    min-height: 550px;
+    max-height: 650px;
+  }
+}

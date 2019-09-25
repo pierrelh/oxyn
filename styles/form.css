@@ -18,6 +18,7 @@
   opacity: 0 !important;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  height: 0 !important;
 }
 
 .form-background{
@@ -57,13 +58,12 @@
   font-family: Roboto, sans-serif;
   letter-spacing: .2em;
   padding: 1.5% 1em 2% 1.3em;
-  font-size: 5em;
+  font-size: 464%;
   border: 4px solid black;
   border-bottom: none;
   text-align: center;
   display: inline-block;
   height: 15%;
-  min-width: 600px;
 }
 
 .form-list > li > h1::after{
@@ -90,6 +90,16 @@
   letter-spacing: .2em;
   font-size: 2.5em;
   margin-top: -12px;
+  font-family: RobotoBold, sans-serif;
+}
+
+.form-list > li > h3{
+  position: relative;
+  margin-left: 0;
+  margin-top: 20px;
+  letter-spacing: .2em;
+  font-size: 2em;
+  color: red;
   font-family: RobotoBold, sans-serif;
 }
 
@@ -140,15 +150,80 @@
   text-align: center;
   left: 0;
   right: 0;
-  width: 35% !important;
+  width: 50% !important;
   border: 3px solid black !important;
   color: black;
   font-family: "Roboto Bold", sans-serif;
   font-weight: 700;
   padding: 1em 3em 1em 3em;
   background-color: white;
-  /* width: auto !important; */
   font-size: 1.7em !important;
   height: auto !important;
   border-radius: 0 !important;
+}
+
+.radio-button-list, .radio-button-label{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.radio-button-label{
+  margin: 10px 0 15px 25%;
+}
+
+.radio-button-label li label, .radio-button-list li input{
+  cursor: pointer;
+}
+
+.radio-button-label li label{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.progress-bar {
+  position: relative;
+  border: black solid 2px;
+  width: 400px;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  margin: 8% auto auto auto;
+}
+.progress-bar .bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.progress-bar .bar span {
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 100%;
+  text-align: center;
+  font-family: "Roboto Bold", sans-serif;
+  font-weight: 700;
+  font-size: 1.7em;
+}
+.progress-bar .bar.positive {
+  background: black;
+  left: 0;
+  width: 0%;
+}
+.progress-bar .bar.positive span {
+  left: 0;
+  color: white;
+}
+.progress-bar .bar.negative {
+  background: white;
+  right: 0;
+  width: 100%;
+}
+.progress-bar .bar.negative span {
+  right: 0;
+  color: black;
+  cursor: pointer;
 }

@@ -1,6 +1,7 @@
-<style>
-<?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/confirmFormStyle.css"); ?>
-</style>
+<?php
+  $link = 'https://' . $_SERVER['HTTP_HOST'];
+?>
+<link rel="stylesheet" href="<?php echo $link ?>/styles/confirmFormStyle.css">
 <section id="confirm-form" class="confirm-form hidden">
   <ul class="confirm-form-list">
     <li><h1>Merci beaucoup !</h1></li>

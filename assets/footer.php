@@ -1,8 +1,9 @@
-<style>
-<?php include_once($_SERVER['DOCUMENT_ROOT']."/styles/footerStyle.css"); ?>
-</style>
+<?php
+  $link = 'https://' . $_SERVER['HTTP_HOST'];
+?>
+<link rel="stylesheet" href="<?php echo $link ?>/styles/footerStyle.css">
 <footer>
-  <img class="footer-logo" src="<?php echo Home ?>img/simpleLogo.png" alt="">
+  <img class="footer-logo" src="<?php echo $link ?>/img/simpleLogo.png" alt="">
   <ul class="div-list-footer">
     <li>
       <div class="footer-div">
@@ -36,16 +37,16 @@
             </a>
           </li>
         </ul>
-        <a class="contact-button-footer" href="#">NOUS CONTACTER</a>
+        <a class="contact-button-footer" href="<?php echo $link ?>/pages/nous-contacter.php">NOUS CONTACTER</a>
       </div>
     </li>
     <li>
       <div class="footer-div footer-right">
         <h4>A PROPOS:</h4>
         <ul>
-          <li><a href="#">POLITIQUE DE CONFIDENTIALITE</a></li>
-          <li><a href="#">MENTIONS LEGALES</a></li>
-          <li><a href="#">CGU</a></li>
+          <li><a href="<?php echo $link ?>/pages/politique-de-confidentialite.php">POLITIQUE DE CONFIDENTIALITE</a></li>
+          <li><a href="<?php echo $link ?>/pages/mentions-legales.php">MENTIONS LEGALES</a></li>
+          <li><a href="<?php echo $link ?>/pages/cgu.php">CGU</a></li>
         </ul>
       </div>
     </li>
